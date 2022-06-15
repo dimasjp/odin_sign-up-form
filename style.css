@@ -6,6 +6,7 @@
     --dark-brown: #d19e60;
     --light-red: #ffc4b7;
     --dark-red: #fd735d;
+    --darker-red: #e9391e;
     --light-green: #B5B754;
     --dark-green: #979908;
     --dark-blue: #5D6482;
@@ -75,6 +76,11 @@ body {
 
 .account-check {
     font-weight: 400;
+    color: var(--darker-red);
+}
+
+a {
+    color: var(--dark-blue);
 }
 
 .form-section {
@@ -102,16 +108,37 @@ input[type=text],
 input[type=email],
 input[type=tel],
 input[type=password] {
-    border: var(--dark-red) solid;
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
     padding: 9px;
     margin-top: 8px;
-    background-color: var(--dark-red);
+    background-color: white;
+    border: 1px solid white;
 }
 
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=password]:focus {
+    border: 1px solid var(--dark-blue);
+    outline: 1.5px solid var(--dark-blue);
+}
 
+input:valid {
+    border: 1px solid var(--light-green);
+}
+
+input:not(:focus):invalid {
+    border: 1px solid var(--darker-red);
+    color: var(--darker-red);
+}
+
+input:placeholder-shown,
+input:not(:focus):placeholder-shown {
+    background-color: var(--dark-red);
+    border: 1px solid var(--darker-red);
+}
 
 .submit-section {
     display: flex;
@@ -133,3 +160,4 @@ button {
     font-weight: bold;
     color: white;
 }
+
