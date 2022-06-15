@@ -1,11 +1,135 @@
+@import url('https: //fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https: //fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+:root {
+    --light-brown: #fdd5a5;
+    --dark-brown: #d19e60;
+    --light-red: #ffc4b7;
+    --dark-red: #fd735d;
+    --light-green: #B5B754;
+    --dark-green: #979908;
+    --dark-blue: #5D6482;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--dark-red);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: calc(100% - 200px);
+    width: 60%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--light-red);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .hero-section {
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background: url(/resource/DrawKit-Fashion-Illustration-05.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitle {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    margin: 0 0 8px 0;
+}
+
+.account-check {
+    font-weight: 400;
 }
 
 .form-section {
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 50px 0;
+}
+
+form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0 20px 0;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password] {
+    border: var(--dark-red) solid;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    padding: 9px;
+    margin-top: 8px;
+    background-color: var(--dark-red);
+}
+
+
+
+.submit-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 83%;
+    margin-top: 10px;
+    font-size: 20px;
+    border: var(--dark-blue) solid;
+    border-radius: 5px;
+    background-color: var(--dark-blue);
+    font-weight: bold;
+    color: white;
 }
